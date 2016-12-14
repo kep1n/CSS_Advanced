@@ -12,7 +12,7 @@
 Reset Styles
 ****************************
 ***************************/
-@import 'normalizer.css';
+@import 'normalize.css';
 
 /* Change all elements to use border-box*/
 html {
@@ -86,6 +86,7 @@ Layout Styles
 	padding-right: 15px;
 }
 
+/* Media Query excludes extra small devices and includes small and above */
 @media (min-width: 48em){
 	/*To create a media query that will target small devices and above*/
 	[class*='col-'] {
@@ -98,6 +99,28 @@ Layout Styles
 	.col-2-3 {
 		/*define a two-thirds width column*/
 		width: 66.6666%;
+	}	
+}
+
+@media (min-width: 48em) {
+	.pull-right-sm {
+		float: right;
+	}
+	.col-1-2 {
+		width: 50%;
+	}
+	.col-1-4 {
+		width:25%;
+	}
+	.col-1-6 {
+		width: 16.6666%;
+	}
+}
+
+@media only screen and (max-width: 47.9375em) {
+	.remove-gutter-xs {
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 }
 
@@ -121,4 +144,7 @@ Theme Styles
 }
 .background-tertiary {
 	background: #8dc63f;
+}
+.background-footer {
+	background: #594a42;
 }
